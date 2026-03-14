@@ -5,3 +5,5 @@ config/
 cache/
 slskd_data/
 filebrowser_config/
+qbittorrent_config/
+lidarr_config/
