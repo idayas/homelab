@@ -5,8 +5,8 @@ services:
     ports:
       - 8888:8080
     volumes:
-      - /mnt/hdd1/media:/data
-      - /mnt/hdd1/qbittorrent:/qbittorrent
+      - /mnt/hdd1/media:/data/media
+      - /mnt/hdd1/qbittorrent:/data/qbittorrent
       - ./filebrowser_config:/config
     environment:
       - FB_BASEURL=/filebrowser
