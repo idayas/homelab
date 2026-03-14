@@ -27,7 +27,7 @@ services:
     cap_add:
       - NET_ADMIN
     volumes:
-      - qbittorrent_config/:/config
+      - ./qbittorrent_config/:/config
       - /mnt/hdd1/qbittorrent:/qbittorrent
     env_file:
       - .env

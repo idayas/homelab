@@ -1,2 +1,7 @@
 .env
 .DS_Store
+
+config/
+cache/
+slskd_data/
+filebrowser_config/
