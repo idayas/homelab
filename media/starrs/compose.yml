@@ -18,7 +18,6 @@ services:
       - VPN_PROVIDER=pia 
       - VPN_LAN_NETWORK=192.168.1.0/24,100.64.0.0/10
       - VPN_LAN_LEAK_ENABLED=false 
-      - VPN_EXPOSE_PORTS_ON_LAN 
       - VPN_AUTO_PORT_FORWARD=true 
       - VPN_HEALTHCHECK_ENABLED=false 
       - VPN_PIA_USER=${VPN_PIA_USER}
@@ -44,7 +43,6 @@ services:
       - PGID=${PGID}
       - UMASK=002
       - TZ=Etc/UTC
-      - WEBUI_PORTS=9696/tcp 
     volumes:
       - ./prowlarr_config:/config
     networks:
@@ -60,10 +58,19 @@ services:
       - PGID=${PGID}
       - UMASK=002
       - TZ=Etc/UTC
-      - WEBUI_PORTS=8686/tcp 
     volumes:
       - ./lidarr_config:/config
       - /mnt/hdd1/qbittorrent:/qbittorrent
+    networks:
+      - arr
+
+  flaresolverr:
+    container_name: flaresolverr
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    ports:
+      - "8191:8191"
+    environment:
+      - LOG_LEVEL=info
     networks:
       - arr
 
