@@ -33,6 +33,7 @@ services:
       - .env
     networks:
       - arr
+    restart: always
   
   prowlarr:
     container_name: prowlarr
