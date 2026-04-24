@@ -98,21 +98,6 @@ services:
     networks:
       - arr
 
-  seerr:
-    container_name: seerr
-    image: ghcr.io/hotio/seerr
-    ports:
-      - "5055:5055"
-    environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
-      - UMASK=002
-      - TZ=Etc/UTC
-    volumes:
-      - ./seerr_config:/config
-    networks:
-      - arr
-
   flaresolverr:
     container_name: flaresolverr
     image: ghcr.io/flaresolverr/flaresolverr:latest

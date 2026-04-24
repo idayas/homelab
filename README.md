@@ -26,7 +26,6 @@ All services are bound to the host's local interface. Remote access is handled b
         - [Lidarr (port 8686)](https://hotio.dev/containers/lidarr/) - Music collection manager
         - [Radarr (port 7878)](https://hotio.dev/containers/radarr/) - Movie collection manager
         - [Sonarr (port 8989)](https://hotio.dev/containers/sonarr/) - TV collection manager
-        - [Seerr (port 5055)](https://hotio.dev/containers/overseerr/) - Better web interface for managing movies and tv shows, allows multiple users and request handling.
         - [FlareSolverr (port 8191)](https://github.com/FlareSolverr/FlareSolverr) - Cloudflare bypass for Prowlarr
 - Apps/
     - Mealie
