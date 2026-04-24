@@ -10,8 +10,7 @@ services:
         limits:
           memory: 1000M
     volumes:
-      - mealie-data:/app/data/
-      - /mnt/hdd1/mealie-data:/app/data/
+      - ./mealie-data:/app/data/
     environment:
       # Set Backend ENV Variables Here
       ALLOW_SIGNUP: "false"

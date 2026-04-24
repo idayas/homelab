@@ -5,3 +5,4 @@ config/
 cache/
 slskd_data/
 *_config/
+mealie-data/
