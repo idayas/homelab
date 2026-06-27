@@ -49,6 +49,7 @@ services:
       - ./prowlarr_config:/config
     networks:
       - arr
+    restart: always
 
   lidarr:
     container_name: lidarr
@@ -65,6 +66,7 @@ services:
       - /mnt/hdd1/qbittorrent:/qbittorrent
     networks:
       - arr
+    restart: always
 
   radarr:
     container_name: radarr
@@ -81,6 +83,7 @@ services:
       - /mnt/hdd1/qbittorrent:/qbittorrent
     networks:
       - arr
+    restart: always
 
   sonarr:
     container_name: sonarr
@@ -97,6 +100,7 @@ services:
       - /mnt/hdd1/qbittorrent:/qbittorrent
     networks:
       - arr
+    restart: always
 
   flaresolverr:
     container_name: flaresolverr
@@ -107,6 +111,7 @@ services:
       - LOG_LEVEL=info
     networks:
       - arr
+    restart: always
 
 networks:
   arr:
